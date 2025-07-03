@@ -1,0 +1,16 @@
+# 🟢 Node.js dependencies
+node_modules/
+
+# 🟢 Build files
+.vite/
+.vite-cache/
+
+
+# 🟢 OS-specific files (Mac & Windows)
+.DS_Store
+Thumbs.db
+
+
+archive/
+
+dist/
