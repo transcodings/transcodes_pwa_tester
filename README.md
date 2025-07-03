@@ -1,52 +1,32 @@
 # PWA Integration Guide 🚀
 
-This guide explains how to integrate Progressive Web App (PWA) functionality into your shopping mall website using the Transcodes Canvas service.
-
-## 📋 Prerequisites
-
-- Basic HTML/CSS/JavaScript knowledge
-- A web server to host your files (local or remote)
-- Access to Transcodes Canvas platform
+This guide explains how to integrate Progressive Web App (PWA) functionality into your shopping mall website using the Transcodes Visual Builder.
 
 ## 🔧 Integration Steps
 
 ### Step 1: Update Your HTML Head Section
 
-Add the following PWA-related links to your `<head>` section in `index.html`:
+Add the following PWA-related links to your <head> section in index.html:
 
 ```html
 <head>
-  <!-- Existing head content -->
+  <!-- Your existing meta tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- PWA Meta Tags -->
-  <meta name="theme-color" content="#000000" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-  <meta name="apple-mobile-web-app-title" content="Shopping Mall" />
-
-  <!-- PWA Manifest -->
+  <!-- 1. Add PWA Manifest -->
   <link
     rel="manifest"
     href="https://transcodes-contents-dev.s3.ca-central-1.amazonaws.com/YOUR_PROJECT_ID/manifest.json"
   />
 
-  <!-- PWA Icons -->
-  <link
-    rel="apple-touch-icon"
-    href="https://transcodes-contents-dev.s3.ca-central-1.amazonaws.com/YOUR_PROJECT_ID/icon-192x192.png"
-  />
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="192x192"
-    href="https://transcodes-contents-dev.s3.ca-central-1.amazonaws.com/YOUR_PROJECT_ID/icon-192x192.png"
-  />
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="512x512"
-    href="https://transcodes-contents-dev.s3.ca-central-1.amazonaws.com/YOUR_PROJECT_ID/icon-512x512.png"
-  />
+  <!-- 2. Add PWA Web Worker -->
+  <script
+    type="module"
+    src="https://transcodes-contents-dev.s3.ca-central-1.amazonaws.com/YOUR_PROJECT_ID/webworker.js"
+  ></script>
+
+  <!-- Your existing stylesheets and scripts -->
 </head>
 ```
 
