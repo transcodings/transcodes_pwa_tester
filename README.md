@@ -50,37 +50,7 @@ Add the following PWA-related links to your `<head>` section in `index.html`:
 </head>
 ```
 
-### Step 2: Replace CDN URLs
-
-Replace the placeholder URLs with your actual Transcodes Canvas URLs:
-
-#### Option A: Using Your Project URLs
-
-```html
-<!-- Replace YOUR_PROJECT_ID with your actual project ID -->
-<link
-  rel="manifest"
-  href="https://transcodes-contents-dev.s3.ca-central-1.amazonaws.com/01JWW55QK8Z4MFK9S0RG6527C6/manifest.json"
-/>
-<link
-  rel="apple-touch-icon"
-  href="https://transcodes-contents-dev.s3.ca-central-1.amazonaws.com/01JWW55QK8Z4MFK9S0RG6527C6/icon-192x192.png"
-/>
-<link
-  rel="icon"
-  type="image/png"
-  sizes="192x192"
-  href="https://transcodes-contents-dev.s3.ca-central-1.amazonaws.com/01JWW55QK8Z4MFK9S0RG6527C6/icon-192x192.png"
-/>
-<link
-  rel="icon"
-  type="image/png"
-  sizes="512x512"
-  href="https://transcodes-contents-dev.s3.ca-central-1.amazonaws.com/01JWW55QK8Z4MFK9S0RG6527C6/icon-512x512.png"
-/>
-```
-
-### Step 3: Configure Service Worker
+### Step 2: Configure Service Worker
 
 #### Method 1: Download from Dashboard
 
