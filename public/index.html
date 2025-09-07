@@ -381,28 +381,6 @@
         font-size: 14px;
       }
 
-      /* Install Button */
-      .install-button {
-        position: fixed;
-        bottom: 24px;
-        right: 24px;
-        background: #1a1a1a;
-        color: white;
-        border: none;
-        padding: 12px 20px;
-        border-radius: 8px;
-        font-weight: 600;
-        cursor: pointer;
-        display: none;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-        transition: all 0.2s ease;
-      }
-
-      .install-button:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
-      }
-
       /* Responsive */
       @media (max-width: 768px) {
         .hero h1 {
@@ -650,7 +628,6 @@
     </footer>
 
     <!-- Install Button -->
-    <button class="install-button" id="install-button">Install App</button>
 
     <script>
       // Cart functionality
@@ -704,25 +681,6 @@
             this.reset();
           }, 2000);
         });
-
-      // PWA Install Button
-      let deferredPrompt;
-      const installButton = document.getElementById('install-button');
-
-      window.addEventListener('beforeinstallprompt', (e) => {
-        e.preventDefault();
-        deferredPrompt = e;
-        installButton.style.display = 'block';
-      });
-
-      installButton.addEventListener('click', async () => {
-        if (deferredPrompt) {
-          deferredPrompt.prompt();
-          const { outcome } = await deferredPrompt.userChoice;
-          deferredPrompt = null;
-          installButton.style.display = 'none';
-        }
-      });
     </script>
   </body>
 </html>
