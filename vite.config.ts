@@ -1,13 +1,24 @@
 import { defineConfig } from 'vite';
+import { viteStaticCopy } from 'vite-plugin-static-copy';
 
 export default defineConfig({
-  root: 'public', // ✅ Ensure Vite serves from `public`
+  root: 'public',
+  plugins: [
+    viteStaticCopy({
+      targets: [
+        {
+          src: 'sw.js', // since we're now in public directory
+          dest: '.',
+        },
+      ],
+    }),
+  ],
   build: {
-    outDir: '../dist', // place dist outside of public/
+    outDir: '../dist',
     emptyOutDir: true,
   },
   server: {
-    open: true, // ✅ Automatically opens the browser
-    port: 5173, // ✅ Default Vite port
+    open: true,
+    port: 5173,
   },
 });
