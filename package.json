@@ -4,7 +4,9 @@
   "description": "A Progressive Web App (PWA) starter template using TypeScript.",
   "type": "module",
   "scripts": {
-    "dev": "npx kill-port 5173 && vite"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
     "vite": "^5.0.0"
